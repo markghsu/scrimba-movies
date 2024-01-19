@@ -80,7 +80,10 @@ header {
     transform: translateY(1px);
 }
 
-.search-results.empty {
+.search-results {
+    padding: 2em 0;
+}
+.search-results:empty {
     min-height: 400px;
     display: flex;
     flex-direction: column;
@@ -88,13 +91,79 @@ header {
     align-items: center;
 }
 
-.search-results.empty::before {
+.search-results:empty::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='62' viewBox='0 0 70 62' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.75 0C3.91751 0 0 3.9175 0 8.75V52.5C0 57.3325 3.91751 61.25 8.75 61.25H61.25C66.0825 61.25 70 57.3325 70 52.5V8.75C70 3.9175 66.0825 0 61.25 0H8.75ZM21.875 8.75H48.125V26.25H21.875V8.75ZM56.875 43.75V52.5H61.25V43.75H56.875ZM48.125 35H21.875V52.5H48.125V35ZM56.875 35H61.25V26.25H56.875V35ZM61.25 17.5V8.75H56.875V17.5H61.25ZM13.125 8.75V17.5H8.75V8.75H13.125ZM13.125 26.25H8.75V35H13.125V26.25ZM8.75 43.75H13.125V52.5H8.75V43.75Z' fill='%23DFDDDD'/%3E%3C/svg%3E");
 }
-.search-results.empty::after {
+.search-results:empty::after {
     color: #DFDDDD;
     content: "Start exploring";
     font-size: 1.125rem;
     font-weight: 700;
     margin: 0.5em auto;
+}
+
+.movie-info {
+    display: flex;
+    padding: 1.5em 0;
+    border-bottom: 1.5px solid #E5E7EB;
+}
+
+.movie-img {
+    display: block;
+    width: 100px;
+}
+
+.movie-text {
+    margin-left: 1em;
+}
+
+.movie-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.movie-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-right: 1em;
+}
+
+.movie-rating {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-left: 0.25em;
+}
+
+.movie-time {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.movie-tags {
+    margin: 0;
+    font-size: 0.75rem;
+    margin-left: 1.5em;
+}
+
+.movie-button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.75rem;
+    margin-left: 1.5em;
+}
+
+.btn-icon {
+    margin-right: 0.25em;
+}
+
+.movie-summary {
+    align-self: start;
+    color: #6B7280;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
 }
