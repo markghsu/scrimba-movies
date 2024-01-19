@@ -1,4 +1,4 @@
-const myAPI = "http://www.omdbapi.com/?apikey=5020cb07"
+const myAPI = "https://www.omdbapi.com/?apikey=5020cb07"
 let searchResults = [];
 const watchlist = !localStorage.getItem("watchlist")?[]:JSON.parse(localStorage.getItem("watchlist"))
 const formEl = document.getElementById('search-form');
